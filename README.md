@@ -88,15 +88,18 @@ The engagement data are aggregated at school district level, and each file in th
 ## Feature Distributions Visualization
 ### Districts per states
 As we can see the dataset contains more districts from Utah and Illinois than any other state.
+
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/86c9b0e4-ddaa-4568-9525-3c25056868f3">
 
 ### Locale Distribution
 The suburbs are dominating with 59 percentage, which also means people from medium to high class have more access to internet.
+
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/23b1f332-2c31-4bc6-a080-fc1fc7226eba">
 
 ### Educational Product Providers
 Google provide most educational products then any one close to it.
 >In short online education is dominatied by Google LLC
+
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/75057fa6-d96c-4d4b-8d38-06076ee24bdf">
 
 ### Educational Sector Distributions
@@ -113,7 +116,7 @@ There are three types of main primary functions.
 We can interact with Plotly sunburst plot to explore the distribution of main categories and subcategories.
 
 >The Learning products have majority shares in this group and the most common subcategories are digital learning platforms.
->
+
 ><img width="400" alt="image" src="https://github.com/user-attachments/assets/564206b4-dcd2-45b2-863d-6b619b2c33bc">
 
 ### Essential Function Subcategories Distribution
@@ -131,14 +134,17 @@ I will be used the Pandas function to display a table showing the mean distribut
 
 ### Black and Hispanic
 I seems like Taxes have more Black/Hispanic students than another state followed by Florida, Michigan, and Minnesota.
+
 <img width="200" alt="image" src="https://github.com/user-attachments/assets/0956f6b7-8faa-4867-be10-087b02f1450d">
 
 ### Reduced Fee or Free Education
 Minnesota provides 70 percent of free or reduced fee education, followed by Michigan and Indiana.
+
 <img width="200" alt="image" src="https://github.com/user-attachments/assets/d473b4bb-adc5-4c3f-8f23-97a0a01fedd7">
 
 ### Per-pupil total expenditure
 New York spend more on education than any other State in US. The runner-up States are New Jersey and Minnesota.
+
 <img width="200" alt="image" src="https://github.com/user-attachments/assets/14675771-afe8-4646-8cfd-b36f5941f984">
 
 ## Time Series Distribution of Educational Product Access Students
@@ -146,18 +152,21 @@ I will be observing time-series distributions of Product Access Based on Locale 
 
 ### Based on Locale
 The cities were hit with Covid19 the hardest which affected the students the most as they have to study from home that is why we can see the dip in product access from April to July 2020 as compared to other locales. During Summer vacation students stopped using educational products. In suburbs, students have more access to the tools then other locale. overall, they all follow a common pattern.
+
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/64659e19-1591-40fe-af15-79f5babee4c8">
 
 ### Based on Top Five States
 New York was hit hardest with Covid19 and that didn't affect the online learning of students as you can see graph became more consistent after the lockdown.
->New York, Wisconsin, and Indian have higher students using these educational products overall.
+New York, Wisconsin, and Indian have higher students using these educational products overall.
+
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/fc7c9bf5-7911-47c6-afaf-4bf20dabe75c">
 
 ### Based on Bottom Five States
 This is odd as Michigan and North Carolina have almost zero product access from March till the end of August. The Texas have a similar pattern but they had a peak in June. Overall these bottom states became active after September 2020.
 
 > It is strange that some states have a very odd pattern, maybe due to a bad educational system or lack of awareness.
-> <img width="800" alt="image" src="https://github.com/user-attachments/assets/d8178c97-eccc-41cf-b702-0c3b4e072433">
+
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/d8178c97-eccc-41cf-b702-0c3b4e072433">
 
 ## Geographical Analysis
 In this section I will be looking at different states based on product access and engagement index.
@@ -165,10 +174,12 @@ In this section I will be looking at different states based on product access an
 
 ### Education Products Access per State
 New York has a higher product access score than any other state, then comes Orange States Wisconson, Illinois, and Indiana. There might be a link between the lower population of Black/Hispanics in these states. Let's explore that in the next part.
+
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/f2618c50-36d9-471f-ab47-87188eb36461">
 
 ### Engagement Index Per State
 The Engagement distribution per state is quite similar to product access. It's logical that if students have access to these products there is a chance of an increase in usage of these platforms.
+
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/5c200a02-ddf8-4d20-a8b4-bcf67b3a45df">
 
 ## Focusing on People from Improvised Neighborhood
