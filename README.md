@@ -37,13 +37,13 @@ Datasets: https://www.kaggle.com/competitions/learnplatform-covid19-impact-on-di
 
 ## Data Description
 
-# Data
+### Data
 We have three types of Dataset.
 1. Products data contains Sevice names, Companies, and educational sectors.
 2. District data contains Demography, Locations, and Educational Spendings.
 3. Engagement data contains student's engagement with different products per day.
 
-## Product
+### Product
 The product file `products_info.csv` includes information about the characteristics of the top 372 products with most users in 2020. The categories listed in this file are part of LearnPlatform's product taxonomy.
 
 | **Name**                       | **Description**                                                                                                                                                                                                                                                                                                                    |
@@ -57,7 +57,7 @@ The product file `products_info.csv` includes information about the characterist
 |                            |   
 
 
-## District
+### District
 The district file ```districts_info.csv``` includes information about the **characteristics of school districts**, including data from
 - NCES (2018-19),
 - FCC (Dec 2018), and
