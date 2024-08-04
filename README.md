@@ -3,9 +3,8 @@
 # Table of Contents
 
 1. [Introduction](#introduction)
-2. [Custom Theme Setup](#custom-theme-setup)
-3. [Data Preprocessing and Exploration](#data-preprocessing-and-exploration)
-4. [Feature Distributions Visualization](#feature-distributions-visualization)
+2. [Data Preprocessing and Exploration](#data-preprocessing-and-exploration)
+3. [Feature Distributions Visualization](#feature-distributions-visualization)
      - [Districts per State](#districts-per-state)
      - [Locale Distribution](#locale-distribution)
      - [Educational Product Providers](#educational-product-providers)
@@ -13,18 +12,18 @@
      - [Primary Functions with Main and Subcategories](#primary-functions-with-main-and-subcategories)
      - [Essential Function Subcategories Distribution](#essential-function-subcategories-distribution)
      - [Top Educational Products](#top-educational-products)
-5. [Distribution of Race, Reduced Fee, Expenditures, and Internet Connection per State](#distribution-of-race-reduced-fee-expenditures-and-internet-connection-per-state)
+4. [Distribution of Race, Reduced Fee, Expenditures, and Internet Connection per State](#distribution-of-race-reduced-fee-expenditures-and-internet-connection-per-state)
    - [Black and Hispanic](#black-and-hispanic)
    - [Reduced Fee or Free Education](#reduced-fee-or-free-education)
    - [Per-Pupil Total Expenditure](#per-pupil-total-expenditure)
-6. [Time Series Distribution of Educational Product Access for Students](#time-series-distribution-of-educational-product-access-for-students)
+5. [Time Series Distribution of Educational Product Access for Students](#time-series-distribution-of-educational-product-access-for-students)
    - [Based on Locale](#based-on-locale)
    - [Based on Top Five States](#based-on-top-five-states)
    - [Based on Top Least States](#based-on-top-least-states)
-7. [Geographical Analysis](#geographical-analysis)
+6. [Geographical Analysis](#geographical-analysis)
    - [Education Products Access per State](#education-products-access-per-state)
    - [Engagement Index Per State](#engagement-index-per-state)
-8. [Focusing on People from Impoverished Neighborhoods](#focusing-on-people-from-impoverished-neighborhoods)
+7. [Focusing on People from Impoverished Neighborhoods](#focusing-on-people-from-impoverished-neighborhoods)
    - [Black/Hispanic Products Access Over the Year](#blackhispanic-products-access-over-the-year)
 
 
@@ -35,6 +34,56 @@ There is an imbalance in the education system during the Covid19 pandemic and mo
 In this project, I will be using data analysis tools to figure out trends in digital learning and how it is effective towards improvised communities. I will be comparing districts and states on factors like demography, internet access, learning product access, and finance. In the end, I will summarize our report and point towards the areas that need our more attention to make education accessible for all students the United States.
 
 Datasets: https://www.kaggle.com/competitions/learnplatform-covid19-impact-on-digital-learning/data
+
+## Data Description
+
+# Data
+We have three types of Dataset.
+1. Products data contains Sevice names, Companies, and educational sectors.
+2. District data contains Demography, Locations, and Educational Spendings.
+3. Engagement data contains student's engagement with different products per day.
+
+## Product
+The product file `products_info.csv` includes information about the characteristics of the top 372 products with most users in 2020. The categories listed in this file are part of LearnPlatform's product taxonomy.
+
+| **Name**                       | **Description**                                                                                                                                                                                                                                                                                                                    |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| LP ID                      | The unique identifier of the product                                                                                                                                                                                                                                                                                           |
+| URL                        | Web Link to the specific product                                                                                                                                                                                                                                                                                               |
+| Product Name               | Name of the specific product                                                                                                                                                                                                                                                                                                   |
+| Provider/Company Name      | Name of the product provider                                                                                                                                                                                                                                                                                                   |
+| Sector(s)                  | Sector of education where the product is used                                                                                                                                                                                                                                                                                  |
+| Primary Essential Function | The basic function of the product. There are two layers of labels here. Products are first labeled as one of these three categories: LC = Learning & Curriculum, CM = Classroom Management, and SDO = School & District Operations. Each of these categories have multiple sub-categories with which the products were labeled |
+|                            |   
+
+
+## District
+The district file ```districts_info.csv``` includes information about the **characteristics of school districts**, including data from
+- NCES (2018-19),
+- FCC (Dec 2018), and
+- Edunomics Lab.
+
+| Name                   | Description                                                                                                                                                                                                                                                                              |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| district_id            | The unique identifier of the school district                                                                                                                                                                                                                                             |
+| state                  | The state where the district resides in                                                                                                                                                                                                                                                  |
+| locale                 | NCES locale classification that categorizes U.S. territory into four types of areas: City, Suburban, Town, and Rural. See Locale Boundaries User's Manual for more information.                                                                                                          |
+| pct_black/hispanic     | Percentage of students in the districts identified as Black or Hispanic based on 2018-19 NCES data                                                                                                                                                                                       |
+| pct_free/reduced       | Percentage of students in the districts eligible for free or reduced-price lunch based on 2018-19 NCES data                                                                                                                                                                              |
+| countyconnectionsratio | ratio (residential fixed high-speed connections over 200 kbps in at least one direction/households) based on the county level data from FCC From 477 (December 2018 version). See FCC data for more information.                                                                         |
+| pptotalraw             | Per-pupil total expenditure (sum of local and federal expenditure) from Edunomics Lab's National Education Resource Database on Schools (NERD$) project. The expenditure data are school-by-school, and we use the median value to represent the expenditure of a given school district. |
+
+### Engagement data
+The engagement data are aggregated at school district level, and each file in the folder `engagement_data` represents data from **one school district**.
+
+
+| Name             | Description                                                                                                    |
+|------------------|----------------------------------------------------------------------------------------------------------------|
+| time             | date in "YYYY-MM-DD"                                                                                           |
+| lp_id            | The unique identifier of the product                                                                           |
+| pct_access       | Percentage of students in the district have at least one page-load event of a given product and on a given day |
+| engagement_index | Total page-load events per one thousand students of a given product and on a given day                         |
+
 
 ## Feature Distributions Visualization
 ### Districts per states
