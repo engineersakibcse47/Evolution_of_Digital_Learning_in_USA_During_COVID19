@@ -1,4 +1,4 @@
-# Evolution_of_Digital_Learning_in_USA_During_COVID19
+# LearnPlatform - Evolution of Digital Learning in USA During COVID-19
 
 # Table of Contents
 
